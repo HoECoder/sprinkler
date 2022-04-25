@@ -22,8 +22,6 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'dediagram = xdf_tools:dediagram',
-            'xdf_splitter = xdf_tools:xdf_splitter'
         ]
     },
     classifiers=[
