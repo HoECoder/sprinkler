@@ -1,16 +1,11 @@
 pipeline:
-  build:
-    image: python:${PY_VERSION}-${PY_TAG}
-    commands:
-      - pip install --editable .
   test-step:
     image: python:${PY_VERSION}-${PY_TAG}
     commands:
-      - pip list
+      - pip install --editable .
       - python -m unittest discover -v -s tests -p test_*.py
 matrix:
   PY_VERSION:
-    - 3.9
     - 3.10
   PY_TAG:
     - slim
