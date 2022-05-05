@@ -6,6 +6,7 @@ pipeline:
   test-step:
     image: python:${PY_VERSION}-${PY_TAG}
     commands:
+      - pip list
       - python -m unittest discover -v -s tests -p test_*.py
 matrix:
   PY_VERSION:
